@@ -49,7 +49,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <div className="flex items-center gap-3">
           <a
             href="/resume.pdf"
-            target="_blank"
+            download="Shehab_Uddin_Resume.pdf"
             className={`hidden md:flex items-center gap-2 font-mono text-xs px-4 py-2 rounded border transition-all hover:border-[#39d0b8] hover:text-[#39d0b8] ${
               darkMode ? "border-[#30363d] text-[#8b949e]" : "border-[#d0d7de] text-[#57606a]"
             }`}
