@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
-const roles = ["backend developer", "problem solver", "full-stack dev", "Django engineer", "API builder"];
+const roles = ["Backend Developer", "Problem Solver", "Full-Stack Developer", "Django Engineer", "API Builder"];
 
 const Hero = ({ darkMode }) => {
   const [roleIndex, setRoleIndex] = useState(0);
