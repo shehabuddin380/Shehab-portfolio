@@ -15,7 +15,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     { label: "01 about", href: "#about" },
     { label: "02 skills", href: "#skills" },
     { label: "03 projects", href: "#projects" },
-    { label: "04 contact", href: "#contact" },
+    { label: "04 projects", href: "#blog" },
+    { label: "05 projects", href: "#testimonials" },
+    { label: "06 contact", href: "#contact" },
   ];
 
   const borderColor = darkMode ? "border-[#21262d]" : "border-[#d0d7de]";
