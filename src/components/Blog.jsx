@@ -5,7 +5,7 @@ const blogs = [
     title: "How Django REST Framework handles authentication",
     desc: "A deep dive into JWT tokens, session auth, and which one to pick for your next API project.",
     tags: ["Django", "REST", "JWT"],
-    read: "5 min read",
+    read: "10 min read",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const blogs = [
     title: "Why I switched from class-based to function-based React",
     desc: "Hooks changed everything. Here's what I learned moving from class components to functional ones.",
     tags: ["React", "JavaScript"],
-    read: "4 min read",
+    read: "7 min read",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const blogs = [
     title: "PostgreSQL vs SQLite — which one for your Django project?",
     desc: "When to use SQLite for development and when to go straight to PostgreSQL from day one.",
     tags: ["Django", "PostgreSQL", "SQLite"],
-    read: "6 min read",
+    read: "5 min read",
   },
 ];
 
