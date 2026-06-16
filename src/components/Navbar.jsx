@@ -12,12 +12,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   }, []);
 
   const links = [
-    { label: "01 about", href: "#about" },
-    { label: "02 skills", href: "#skills" },
-    { label: "03 projects", href: "#projects" },
-    { label: "04 projects", href: "#blog" },
-    { label: "05 projects", href: "#testimonials" },
-    { label: "06 contact", href: "#contact" },
+    { label: "01 About", href: "#about" },
+    { label: "02 Skills", href: "#skills" },
+    { label: "03 Projects", href: "#projects" },
+    { label: "04 Blog", href: "#blog" },
+    { label: "05 Testimonials", href: "#testimonials" },
+    { label: "06 Contact", href: "#contact" },
   ];
 
   const borderColor = darkMode ? "border-[#21262d]" : "border-[#d0d7de]";
@@ -31,7 +31,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* Logo */}
         <a href="#" className="font-mono text-sm font-bold flex items-center gap-2">
           <span className="text-[#39d0b8]">●</span>
-          <span className={darkMode ? "text-white" : "text-[#0d1117]"}>~/shehab</span>
+          <span className={darkMode ? "text-white" : "text-[#0d1117]"}>~/Shehab</span>
         </a>
 
         {/* Desktop links */}
