@@ -19,7 +19,7 @@ const Contact = ({ darkMode }) => {
     <section id="contact" className={`py-24 ${darkMode ? "bg-[#0d1117]" : "bg-[#f6f8fa]"}`}>
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-12">
-          <p className={`font-mono text-xs mb-2 ${accent}`}>05 / contact ──────────</p>
+          <p className={`font-mono text-xs mb-2 ${accent}`}>06 / contact ──────────</p>
           <h2 className={`font-mono text-4xl font-black ${heading}`}>Let's build something</h2>
         </div>
 
