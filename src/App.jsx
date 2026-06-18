@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,6 +9,24 @@ import Blog from "./components/Blog";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import BlogPost from "./components/BlogPost"
+
+
+function Home ({ darkMode }) {
+  return (
+    <>
+      <Hero darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <Skills darkMode={darkMode} />
+      <Projects darkMode={darkMode} />
+      <Blog darkMode={darkMode} />
+      <Testimonials darkMode={darkMode} />
+      <Contact darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
+    </>
+  );
+}
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -15,20 +34,16 @@ function App() {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
-
-  return (
+  return(
     <div className={darkMode ? "bg-[#0d1117] text-white" : "bg-[#f0f4f8] text-[#0d1117]"}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Hero darkMode={darkMode} />
-      <About darkMode={darkMode} />
-      <Skills darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      < Blog darkMode={darkMode} />
-      < Testimonials darkMode={darkMode} />
-      <Contact darkMode={darkMode} />
-      <Footer darkMode={darkMode} />
+      <Routes>
+        <Route path="/" element={<Home darkMode={darkMode} />} />
+        <Route path="/blog/:id" element={<BlogPost darkMode={darkMode} />} />
+      </Routes>
     </div>
-  );
+  )
+
 }
 
 export default App;
