@@ -9,10 +9,10 @@ import Blog from "./components/Blog";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import BlogPost from "./components/BlogPost"
+import BlogPost from "./components/BlogPost";
 
 
-function Home ({ darkMode }) {
+function Home({ darkMode }) {
   return (
     <>
       <Hero darkMode={darkMode} />
@@ -34,16 +34,17 @@ function App() {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
-  return(
+
+  return (
     <div className={darkMode ? "bg-[#0d1117] text-white" : "bg-[#f0f4f8] text-[#0d1117]"}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} />} />
         <Route path="/blog/:id" element={<BlogPost darkMode={darkMode} />} />
+        <Route path="/contact" element={<Contact darkMode={darkMode} />} />
       </Routes>
     </div>
-  )
-
+  );
 }
 
 export default App;
