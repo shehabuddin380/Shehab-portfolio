@@ -91,7 +91,60 @@ const BlogPost = ({ darkMode }) => {
 
   return (
     <div className={`min-h-screen ${bg}`}>
-      
+      <div className="max-w-3xl mx-auto px-6 py-20">
+
+        {/* Back button */}
+        <button
+          onClick={() => navigate("/#blog")}
+          className={`font-mono text-xs mb-12 flex items-center gap-2 transition-colors ${accent} hover:opacity-70`}
+        >
+          ← Back to blog
+        </button>
+
+        {/* Header */}
+        <div className="mb-10">
+          <p className={`font-mono text-xs mb-4 flex gap-4 ${dim}`}>
+            <span>{post.date}</span>
+            <span>·</span>
+            <span>{post.read}</span>
+          </p>
+
+          <h1 className={`font-mono text-2xl md:text-3xl font-black leading-snug mb-5 ${heading}`}>
+            {post.title}
+          </h1>
+
+          <p className={`text-sm leading-relaxed mb-6 ${dim}`} style={{ fontFamily: "sans-serif" }}>
+            {post.desc}
+          </p>
+
+          <div className="flex flex-wrap gap-2">
+            {post.tags.map((tag, i) => (
+              <span
+                key={i}
+                className={`font-mono text-xs px-2 py-0.5 rounded border ${tagStyle}`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className={`border-b mb-10 ${borderColor}`} />
+
+        {/* Content */}
+        <div>{renderContent(post.content)}</div>
+
+        {/* Footer nav */}
+        <div className={`mt-20 pt-8 border-t ${borderColor}`}>
+          <button
+            onClick={() => navigate("/#blog")}
+            className={`font-mono text-xs px-6 py-2 border transition-colors ${btnBorder}`}
+          >
+            ← All posts
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
