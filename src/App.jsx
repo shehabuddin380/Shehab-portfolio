@@ -42,7 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} />} />
         <Route path="/blog/:id" element={<BlogPost darkMode={darkMode} />} />
-        <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+        <Route path="/contact" element={<ContactPage darkMode={darkMode} />} />
       </Routes>
     </div>
   );

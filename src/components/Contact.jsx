@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Contact = ({ darkMode }) => {
+  const navigate = useNavigate();
+
   const dim = darkMode ? "text-[#8b949e]" : "text-[#57606a]";
   const card = darkMode ? "bg-[#161b22] border-[#30363d]" : "bg-white border-[#d0d7de]";
   const accent = darkMode ? "text-[#39d0b8]" : "text-[#0f7b6c]";
@@ -8,12 +11,6 @@ const Contact = ({ darkMode }) => {
   const btnBorder = darkMode
     ? "border-[#30363d] text-[#8b949e] hover:border-[#39d0b8] hover:text-[#39d0b8]"
     : "border-[#d0d7de] text-[#57606a] hover:border-[#0f7b6c] hover:text-[#0f7b6c]";
-
-  const links = [
-    { icon: <FiMail size={14} />, label: "shehabuddin380@gmail.com", href: "mailto:shehabuddin380@gmail.com" },
-    { icon: <FiGithub size={14} />, label: "GitHub", href: "https://github.com/shehabuddin380" },
-    { icon: <FiLinkedin size={14} />, label: "LinkedIn", href: "https://www.linkedin.com/in/shehabuddin380/" },
-  ];
 
   return (
     <section id="contact" className={`py-24 ${darkMode ? "bg-[#0d1117]" : "bg-[#f6f8fa]"}`}>
@@ -31,17 +28,35 @@ const Contact = ({ darkMode }) => {
             I'm looking for a team where I can own services end to end and keep learning fast. The fastest way to reach me is email.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {links.map((l, i) => (
-              <a
-                key={i}
-                href={l.href}
-                target="_blank"
-                rel="noreferrer"
-                className={`flex items-center gap-2 font-mono text-xs px-5 py-3 rounded border transition-all ${btnBorder}`}
-              >
-                {l.icon} {l.label}
-              </a>
-            ))}
+
+            {/* Email button — click korle contact form page e jabe */}
+            <button
+              onClick={() => navigate("/contact")}
+              className={`flex items-center gap-2 font-mono text-xs px-5 py-3 rounded border transition-all ${btnBorder}`}
+            >
+              <FiMail size={14} /> shehabuddin380@gmail.com
+            </button>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/shehabuddin380"
+              target="_blank"
+              rel="noreferrer"
+              className={`flex items-center gap-2 font-mono text-xs px-5 py-3 rounded border transition-all ${btnBorder}`}
+            >
+              <FiGithub size={14} /> GitHub
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/shehabuddin380/"
+              target="_blank"
+              rel="noreferrer"
+              className={`flex items-center gap-2 font-mono text-xs px-5 py-3 rounded border transition-all ${btnBorder}`}
+            >
+              <FiLinkedin size={14} /> LinkedIn
+            </a>
+
           </div>
         </div>
       </div>
