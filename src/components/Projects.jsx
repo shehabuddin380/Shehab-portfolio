@@ -9,7 +9,7 @@ const projects = [
     description: "A full-featured e-commerce platform with product listings, cart management, and order tracking built with Django REST Framework.",
     tags: ["Python", "Django", "REST API", "PostgreSQL"],
     github: "https://github.com/shehabuddin380",
-    demo: "#",
+    demo: "https://phi-mart-pied.vercel.app/api/v1/auth/",
   },
   {
     id: 2,
