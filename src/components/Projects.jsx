@@ -19,7 +19,7 @@ const projects = [
     description: "React frontend for PhiMart — responsive UI with product filtering, cart state management, and smooth checkout flow.",
     tags: ["React", "JavaScript", "Tailwind CSS"],
     github: "https://github.com/shehabuddin380",
-    demo: "#",
+    demo: "https://phimart-client-nu.vercel.app/",
   },
   {
     id: 3,
